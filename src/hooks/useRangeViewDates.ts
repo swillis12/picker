@@ -128,7 +128,7 @@ export default function useRangeViewDates<DateType>({
 
       // Reset another one when not have value
       const anotherIndex = (index + 1) % 2;
-      if (getValue(values, anotherIndex)) {
+      if (!getValue(values, anotherIndex)) {
         newViewDates = updateValues(newViewDates, viewDate, anotherIndex);
       }
 
